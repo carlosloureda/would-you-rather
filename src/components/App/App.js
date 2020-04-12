@@ -1,22 +1,24 @@
 import React from "react";
 import "./App.css";
 
+import Nav from "../Nav";
+import Login from "../Login";
+import Dashboard from "../Dashboard";
+import NewQuestion from "../NewQuestion";
+import Leaderboard from "../Leaderboard";
+import Question from "../Question";
+import NotFound from "../NotFound";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav />
+      <Login />
+      <Dashboard />
+      <NewQuestion />
+      <Leaderboard />
+      <Question />
+      <NotFound />
     </div>
   );
 }
