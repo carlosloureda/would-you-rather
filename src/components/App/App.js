@@ -1,6 +1,7 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "./App.css";
 import Nav from "../Nav";
 import Login from "../Login";
 import Dashboard from "../Dashboard";
@@ -11,15 +12,17 @@ import NotFound from "../NotFound";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Nav />
-      <Login />
-      <Dashboard />
-      <NewQuestion />
-      <Leaderboard />
-      <Question />
-      <NotFound />
-    </div>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/add" component={NewQuestion} />
+        <Route exact path="/leaderboard" component={Leaderboard} />
+        <Route exact path="/questions/:id" component={Question} />
+        <Route path="*" component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
