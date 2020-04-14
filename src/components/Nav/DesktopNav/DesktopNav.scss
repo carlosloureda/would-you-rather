@@ -1,0 +1,29 @@
+@import "../../../styles/mixins.scss";
+// @include variable(background-color, --theme-primary-color, blue);
+
+.desktop-nav {
+  display: flex;
+  //   flex-direction: row;s
+  align-items: center;
+  @include variable(background-color, --theme-primary-color, blue);
+
+  & .desktop-nav__menu {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 250px);
+  }
+
+  & .ant-menu-item {
+    padding: 0px 5px;
+  }
+  & .ant-menu-submenu-title {
+    padding: 10px 20px;
+  }
+  & .ant-menu-item,
+  .ant-menu-submenu-title a {
+    padding: 10px 15px;
+  }
+  & .ant-menu-horizontal {
+    border-bottom: none;
+  }
+}
