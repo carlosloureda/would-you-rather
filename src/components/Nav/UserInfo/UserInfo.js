@@ -8,7 +8,7 @@ const UserInfo = ({ user, isMobile }) => {
   const history = useHistory();
   const onLogout = () => {
     // TODO: implement Redux
-    history.pushState("/login");
+    history.push("/login");
   };
 
   if (!user || !user.name) {
