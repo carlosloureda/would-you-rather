@@ -1,0 +1,21 @@
+@import "../../../styles/mixins.scss";
+
+.logo {
+  width: 250px;
+
+  @include variable(background-color, --theme-primary-color, blue);
+  text-align: center;
+  padding: 20px 20px;
+  text-transform: capitalize;
+
+  & a {
+    font-size: 20px;
+    @include variable(color, --theme-secondary-color, white);
+  }
+}
+
+@media (max-width: 300px) {
+  .logo a {
+    font-size: 14px;
+  }
+}

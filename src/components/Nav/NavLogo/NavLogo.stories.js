@@ -1,12 +1,12 @@
 import React from "react";
-import Login from "./Login";
+import NavLogo from "./NavLogo";
 
 import StoryRouter from "storybook-react-router";
 
 export default {
-  title: "Login",
-  component: Login,
+  title: "NavLogo",
+  component: NavLogo,
   decorators: [StoryRouter()],
 };
 
-export const Default = () => <Login />;
+export const Default = () => <NavLogo />;
