@@ -1,0 +1,28 @@
+@import "./../../../styles/mixins.scss";
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  @include variable(background-color, --theme-primary-color, blue);
+  color: white;
+
+  & button {
+    @include variable(color, --theme-secondary-color, white);
+  }
+
+  &.mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    @include variable(color, --theme-primary-color, blue);
+
+    > .user-info__content {
+      display: flex;
+      flex-direction: row-reverse;
+      > .user-info__name {
+        padding-left: 5px;
+      }
+    }
+  }
+}
