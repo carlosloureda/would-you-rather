@@ -1,18 +1,3 @@
-@import "./../../../styles/mixins.scss";
-
-.card-avatar__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  & .avatar {
-    @include variable(border-color, --theme-primary-color, blue);
-    border-width: 2px;
-    border-style: solid;
-    padding: 10px;
-    @include variable(background-color, --light-blue, white);
-  }
-}
-
 .card-divider {
   height: 100%;
 }

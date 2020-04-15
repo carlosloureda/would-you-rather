@@ -1,0 +1,45 @@
+@import "../../../styles/mixins.scss";
+
+// .leader-card__title.ant-typography {
+//   font-size: 26px;
+// }
+
+.leader-card__info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.score-badge {
+  @include variable(background-color, --theme-secondary-color, violet);
+  @include variable(color, --theme-primary-color, blue);
+  height: 75px;
+  width: 75px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+.trophy__container {
+  background-color: #ececec;
+  height: 75px;
+  width: 75px;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-top: 5px;
+  &.trophy-gold {
+    color: #c9b037;
+  }
+  &.trophy-silver {
+    color: #d7d7d7;
+  }
+  &.trophy-bronze {
+    color: #ad8a56;
+  }
+}

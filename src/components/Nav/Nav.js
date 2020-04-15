@@ -7,10 +7,10 @@ import MobileNav from "./MobileNav";
 const Nav = () => {
   return (
     <header>
-      <div class="desktop-menu">
+      <div className="desktop-menu">
         <DesktopNav />
       </div>
-      <div class="mobile-menu">
+      <div className="mobile-menu">
         <MobileNav />
       </div>
     </header>
